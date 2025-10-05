@@ -1,32 +1,22 @@
 import { useState } from "react";
 
 import "./App.css";
-import PrimerComponente from "./components/PrimerComponente";
-import SegundoComponente from "./components/SegundoComponente";
-import CardBasic from "./components/CardBasic";
-import ListItem from "./components/ListItem";
+import Card from "./components/Card";
+import List from "./components/List";
 import Button from "./components/Button";
 
 function App() {
-  const [isLoading, setIsLoading] = useState(false);
-  const handleClick = () => setIsLoading(!isLoading);
-
-  const list = ["Goku", "tanjiro", "Eren"];
-  const handleSelect = (element: string) => {
-    console.log("Imprimiendo ", element);
-  };
+  const [data, setData] = useState(["Goku", "Tanjiro", "chanchito feliz"]);
+  const addMinion = () => setData([...data, "Minion"]);
+  const delMinion = () => setData([...data.slice(0, -1)]);
 
   return (
     <>
-      <h1>Vite + React</h1>
-      <PrimerComponente></PrimerComponente>
-      <SegundoComponente></SegundoComponente>
-      <ListItem data={list} onSelect={handleSelect}></ListItem>
-      <Button isLoading={isLoading} onClick={handleClick}>
-        Hola mundo
-      </Button>
-
-      <CardBasic></CardBasic>
+      <Card body={333}>
+        <Button onClick={addMinion}> Agregar </Button>
+        <Button onClick={delMinion}> Eliminar </Button>
+        <List data={data}></List>
+      </Card>
     </>
   );
 }

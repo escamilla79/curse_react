@@ -17,7 +17,7 @@ function ListItem({ data, onSelect }: Props) {
       {data.map((element, i) => (
         <li
           onClick={() => handleClick(i, element)}
-          key={element}
+          key={clear}
           className={`list-group-item ${index == i ? "active" : ""}`}
         >
           {element}

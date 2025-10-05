@@ -1,12 +1,12 @@
 import React, { ReactNode } from "react";
 
 type Props = {
-  isLoading: boolean;
   children: ReactNode;
+  isLoading?: boolean;
   onClick: () => void;
 };
 
-function Button({ isLoading, children, onClick }: Props) {
+function Button({ children, isLoading, onClick }: Props) {
   return (
     <div>
       <button
