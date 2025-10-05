@@ -15,6 +15,7 @@ function App() {
       <PrimerComponente></PrimerComponente>
       <SegundoComponente></SegundoComponente>
       <ListItem data={list}></ListItem>
+
       <Card></Card>
     </>
   );
