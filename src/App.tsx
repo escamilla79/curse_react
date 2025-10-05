@@ -9,12 +9,19 @@ import ListItem from "./components/ListItem";
 
 function App() {
   const list = ["Goku", "tanjiro", "Eren"];
+  const handleSelect = (element: string) => {
+    console.log("Imprimiendo ", element);
+  };
+  const handleSelect2 = (element: string) => {
+    console.log("Reportando  ", element);
+  };
   return (
     <>
       <h1>Vite + React</h1>
       <PrimerComponente></PrimerComponente>
       <SegundoComponente></SegundoComponente>
-      <ListItem data={list}></ListItem>
+      <ListItem data={list} onSelect={handleSelect}></ListItem>
+      <ListItem data={list} onSelect={handleSelect2}></ListItem>
 
       <Card></Card>
     </>
