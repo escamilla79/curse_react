@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./App.css";
 import PrimerComponente from "./components/PrimerComponente";
 import SegundoComponente from "./components/SegundoComponente";
-import Card from "./components/Card";
+import CardBasic from "./components/CardBasic";
 import ListItem from "./components/ListItem";
 import Button from "./components/Button";
 
@@ -26,7 +26,7 @@ function App() {
         Hola mundo
       </Button>
 
-      <Card></Card>
+      <CardBasic></CardBasic>
     </>
   );
 }
