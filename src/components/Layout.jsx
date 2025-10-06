@@ -13,8 +13,14 @@ const Layout = () => {
         |
         <Link to="basic" style={{ marginRight: 10 }}>
           Basic
-        </Link>{" "}
+        </Link>
         |
+        <Link to="consumiendo_api" style={{ marginRight: 10 }}>
+          Consumiendo API
+        </Link>
+        <Link to="users" style={{ marginRight: 10 }}>
+          Users
+        </Link>
         <Link to="about" style={{ marginRight: 10 }}>
           About
         </Link>
