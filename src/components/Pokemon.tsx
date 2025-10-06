@@ -5,7 +5,7 @@ const Pokemon = () => {
   const [id, setId] = useState(1);
 
   const handleAnterior = () => {
-    setId(id - 1);
+    id > 1 && setId(id - 1);
   };
 
   const handleSiguiente = () => {
